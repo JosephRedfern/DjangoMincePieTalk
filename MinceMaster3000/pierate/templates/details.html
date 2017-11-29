@@ -1,0 +1,18 @@
+<h1>{{pie.name}}</h1>
+
+<b>Price:</b>£{{pie.price}}<br>
+<b>Added:</b>{{pie.date_added}}<br>
+<b>Average Rating: </b>{{pie.get_average_rating}}<br>
+<hr/>
+
+{% for rating in pie.rating_set.all %}
+<h3>{{rating.creator}}</h3> 
+<i>Added {{rating.date_added}}</i><br>
+<b>Filling Rating: </b> {{rating.filling}}/5 <br>
+<b>Pastry Rating: </b> {{rating.pastry}}/5 <br>
+<b>Comments:</b>
+<p>{{rating.comments}}</p>
+<hr/>
+{% endfor %}
+
+<a href="/">Back</a>

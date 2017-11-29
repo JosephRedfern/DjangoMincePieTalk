@@ -1,0 +1,19 @@
+<h1>MinceMaster 3000</h1>
+
+<p><a href='/rate'>Click here to add a rating</a></p>
+
+<table>
+    <tr>
+        <th>Pie Name</th>
+        <th>Pie Price</th>
+        <th>Average Rating</th>
+    </tr>
+{% for pie in pies %}
+    <tr>
+        <td><a href="/p/{{pie.id}}">{{pie.name}}</a></td>
+        <td>£{{pie.price}}</td>
+        <td>{{pie.get_average_rating|floatformat}}</td>
+    </tr>
+{% endfor %}
+
+</table>

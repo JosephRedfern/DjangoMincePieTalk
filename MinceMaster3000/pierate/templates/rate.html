@@ -1,0 +1,13 @@
+<h1>Rate a Pie</h1>
+
+<p>Fill in the form below to rate a pie.</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <table>
+    {{ form }}
+    </table>
+<input type="submit"/ >
+</form>
+
+<a href="/">Back</a>
